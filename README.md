@@ -21,12 +21,12 @@ npm start
 
 🛠 Tech Stack
 
-__Frontend__:
+Frontend:
 	•	React
 	•	Tailwind CSS / Material UI
 	•	Video.js (HLS player)
 
-__Backend__:
+Backend:
 	•	Node.js
 	•	Express
 	•	MongoDB
@@ -34,7 +34,7 @@ __Backend__:
 	•	Stripe / PayPal (mocked)
 	•	TMDB API
 
-__DevOps__:
+DevOps:
 	•	Docker (frontend & backend)
 	•	GitHub Actions (CI)
 	•	ArgoCD (CD with GitOps)
@@ -44,39 +44,33 @@ __DevOps__:
 
 ⸻
 
-🚀 __Key Features__
+🚀 Key Features
 
-🔐 __Authentication__:
+🔐 Authentication:
 	•	JWT-based login & registration
 	•	Role-based access control (User / Admin)
 
-📺 __Streaming__:
+📺 Streaming:
 	•	HLS video streaming via Video.js
 	•	Movie browsing by genre
 	•	Detailed movie pages
 	•	Watchlist support
 
-🧑‍💻 __Admin Features__:
+🧑‍💻 Admin Features:
 	•	Secure admin panel
 	•	Upload and manage movies
 
-🧱 __DevOps & Deployment__:
+🧱 DevOps & Deployment:
 	•	Dockerized microservices (frontend/backend)
 	•	CI/CD pipeline using GitHub Actions and ArgoCD
         •       Terraform (Infrasture Provision)
 	•	Deployed to AWS EKS (Kubernetes)
 	•	Real-time monitoring with Prometheus and Grafana
 
-📷 __Screenshots__
+📷 Screenshots
 
 (Optional – add if available)
 
 
-📁 __Project Structure__
-├── client/               # React Frontend
-├── server/               # Node.js Backend API
-├── deploy/               # Kubernetes manifests or Helm charts Terraform
-├── .github/workflows/    # GitHub Actions
-└── README.md             # ReadMe!
 
 
