@@ -1,4 +1,5 @@
-📦 How to Run Locally (Dev Mode)
+📦 __How to Run Locally (Dev Mode)__
+
 git clone https://github.com/Kebba91/Netflix
 
 __Start Backend__
