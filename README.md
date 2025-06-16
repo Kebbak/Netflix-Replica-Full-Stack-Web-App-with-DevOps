@@ -1,5 +1,5 @@
 📦 How to Run Locally (Dev Mode)
-git clone https://github.com/yourusername/netflix-clone-devops.git
+git clone https://github.com/Kebba91/Netflix
 
 __Start Backend__
 cd backend
@@ -13,12 +13,12 @@ npm start
 
 🛠 Tech Stack
 
-Frontend:
+__Frontend__:
 	•	React
 	•	Tailwind CSS / Material UI
 	•	Video.js (HLS player)
 
-Backend:
+__Backend__:
 	•	Node.js
 	•	Express
 	•	MongoDB
@@ -26,7 +26,7 @@ Backend:
 	•	Stripe / PayPal (mocked)
 	•	TMDB API
 
-DevOps:
+__DevOps__:
 	•	Docker (frontend & backend)
 	•	GitHub Actions (CI)
 	•	ArgoCD (CD with GitOps)
@@ -36,35 +36,35 @@ DevOps:
 
 ⸻
 
-🚀 Key Features
+🚀 __Key Features__
 
-🔐 Authentication:
+🔐 __Authentication__:
 	•	JWT-based login & registration
 	•	Role-based access control (User / Admin)
 
-📺 Streaming:
+📺 __Streaming__:
 	•	HLS video streaming via Video.js
 	•	Movie browsing by genre
 	•	Detailed movie pages
 	•	Watchlist support
 
-🧑‍💻 Admin Features:
+🧑‍💻 __Admin Features__:
 	•	Secure admin panel
 	•	Upload and manage movies
 
-🧱 DevOps & Deployment:
+🧱 __DevOps & Deployment__:
 	•	Dockerized microservices (frontend/backend)
 	•	CI/CD pipeline using GitHub Actions and ArgoCD
-  • Terraform (Infrasture Provision)
+        •       Terraform (Infrasture Provision)
 	•	Deployed to AWS EKS (Kubernetes)
 	•	Real-time monitoring with Prometheus and Grafana
 
-📷 Screenshots
+📷 __Screenshots__
 
 (Optional – add if available)
 
 
-📁 Project Structure
+📁 __Project Structure__
 ├── client/               # React Frontend
 ├── server/               # Node.js Backend API
 ├── deploy/               # Kubernetes manifests or Helm charts Terraform
