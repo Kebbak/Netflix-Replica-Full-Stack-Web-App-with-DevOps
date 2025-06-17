@@ -59,7 +59,6 @@ DevOps:
 	•	Upload and manage movies
 
 🧱 DevOps & Deployment:
-
 	•	Dockerized microservices (frontend/backend)
 	•	CI/CD pipeline using GitHub Actions and ArgoCD
         •       Terraform (Infrasture Provision)
