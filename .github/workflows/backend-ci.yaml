@@ -2,16 +2,15 @@ name: Backend CI/CD
 
 on:
   push:
+    branches:
+      - main
     paths:
-      - "backend/**"
-      - ".github/workflows/backend-ci.yml"
+      - 'backend/**'
+      - '.github/workflows/backend-ci.yml'
 
 jobs:
   backend-build-push:
     runs-on: ubuntu-latest
-
-    env:
-      IMAGE: ${{ secrets.ECR_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/netflix-backend:latest
 
     steps:
       - name: Checkout code
@@ -28,8 +27,11 @@ jobs:
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v2
 
+      - name: Set IMAGE tag
+        run: echo "IMAGE=${{ secrets.ECR_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/netflix-frontend:v1" >> $GITHUB_ENV
+
       - name: Build Docker image
-        run: docker build -t $IMAGE ./backend
+        run: docker build -t $IMAGE ./frontend
 
       - name: Push image to ECR
         run: docker push $IMAGE
