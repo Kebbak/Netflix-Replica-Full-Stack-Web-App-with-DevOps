@@ -18,14 +18,12 @@ variable "vpc_security_group_ids" {
   type        = string
 }
 
-variable "cluster_name" {
-  type        = string
-  description = "description"
-}
-
 variable "instance_type" {
   description = "The instance type for the EKS nodes"
   type        = string
 }
-
+# variable "cluster_name" {
+#   description = "The name of the EKS cluster"
+#   type        = string
+# }
 
