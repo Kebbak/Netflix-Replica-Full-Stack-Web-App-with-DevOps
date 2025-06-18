@@ -1,0 +1,33 @@
+name: Terraform Apply/Destroy
+
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: 'Terraform Action (apply/destroy)'
+        required: true
+        default: 'apply'
+        type: choice
+        options:
+          - apply
+          - destroy
+
+jobs:
+  terraform-execute:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v2
+        with:
+          terraform_version: 1.6.0  # adjust as needed
+
+      - name: Terraform Init
+        run: terraform init
+
+      - name: Terraform ${{ github.event.inputs.action }}
+        run: terraform ${{ github.event.inputs.action }} -auto-approve
