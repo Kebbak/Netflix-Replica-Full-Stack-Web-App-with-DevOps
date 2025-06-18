@@ -66,9 +66,11 @@ DevOps:
         •       Trivy & Checkov (Security Vulnerabilites)
 	•	Real-time monitoring with Prometheus and Grafana
 
-📷 Screenshots
+__Architectural diagram__
 
-(Optional – add if available)
+<img width="471" alt="image" src="https://github.com/user-attachments/assets/9f7f4262-92d4-4b3c-a47d-676cbeeb799e" />
+
+
 
 
 
