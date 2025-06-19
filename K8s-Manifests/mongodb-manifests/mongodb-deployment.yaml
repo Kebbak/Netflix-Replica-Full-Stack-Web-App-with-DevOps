@@ -15,13 +15,13 @@ spec:
     spec:
       containers:
         - name: mongodb
-          image: mongo:latest
+          image: mongo:6.0
           ports:
             - containerPort: 27017
           volumeMounts:
-            - name: mongo-persistent-storage
+            - name: mongodb-storage
               mountPath: /data/db
       volumes:
-        - name: mongo-persistent-storage
+        - name: mongodb-storage
           persistentVolumeClaim:
-            claimName: mongo-pvc
+            claimName: mongodb-pvc
