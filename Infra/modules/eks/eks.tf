@@ -28,16 +28,6 @@ resource "aws_eks_addon" "eks-add" {
   ]
 }
 
-# Add addons core dns
-resource "aws_eks_addon" "eks-add-coredns" {
-  cluster_name = aws_eks_cluster.aws_eks_cluster.name
-  addon_name   = "coredns"
-
-  depends_on = [
-    aws_eks_cluster.aws_eks_cluster
-  ]
-}
-
 # Add addons kube proxy
 resource "aws_eks_addon" "eks-add-kube-proxy" {
   cluster_name = aws_eks_cluster.aws_eks_cluster.name
@@ -48,9 +38,19 @@ resource "aws_eks_addon" "eks-add-kube-proxy" {
   ]
 }
 
+# Add addons core dns
+resource "aws_eks_addon" "eks-add-core-dns" {
+  cluster_name = aws_eks_cluster.aws_eks_cluster.name
+  addon_name   = "coredns"  
+  resolve_conflicts = "PRESERVE"
+  depends_on = [
+    aws_eks_cluster.aws_eks_cluster
+  ]
+}
+
 # EKS nodes
 resource "aws_eks_node_group" "my_eks_node" {
-  cluster_name            = aws_eks_cluster.aws_eks_cluster.name
+  cluster_name   = aws_eks_cluster.aws_eks_cluster.name
   node_group_name = var.node_group_name
   node_role_arn   = aws_iam_role.eks_node_role.arn
   subnet_ids      = var.subnet_ids
