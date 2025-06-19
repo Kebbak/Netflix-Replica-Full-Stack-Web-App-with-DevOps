@@ -1,20 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: netflix-clone-backend
+  name: netflix-shared-infra
   namespace: argocd
 spec:
+  destination:
+    namespace: default
+    server: https://kubernetes.default.svc
   project: default
   source:
     repoURL: 'https://github.com/Kebba91/Netflix-Replica-Full-Stack-Web-App-with-DevOps'
+    path: K8s-Manifests/infra
     targetRevision: main
-    path: K8s-Manifests
-  destination:
-    server: 'https://kubernetes.default.svc'
-    namespace: default
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
-    syncOptions:
-      - CreateNamespace=true
