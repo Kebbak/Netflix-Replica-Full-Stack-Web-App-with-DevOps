@@ -21,7 +21,7 @@ spec:
           env:
             - name: PORT
               value: "5000"
-            - name: MONGODB_URI
+            - name: MONGO_URI
               value: mongodb://mongodb:27017/netflix-clone
           readinessProbe:
             httpGet:
