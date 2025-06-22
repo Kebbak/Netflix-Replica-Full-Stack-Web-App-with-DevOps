@@ -23,8 +23,8 @@ export default function Profile() {
       {/* Settings Section */}
       <section id="settings-section" className="space-y-4">
         <h2 className="text-xl text-gray-400 font-semibold">Profile Settings</h2>
-        <p>Name: <strong>{user?.name || 'John Doe'}</strong></p>
-        <p>Email: <strong>{user?.email || 'john@example.com'}</strong></p>
+        <p>Name: <strong>{user?.name || 'name surname'}</strong></p>
+        <p>Email: <strong>{user?.email || 'namesurname@example.com'}</strong></p>
         <p>Language: <strong>{user?.language || 'English'}</strong></p>
 
         <div className="mt-4 space-y-2 text-red-500">
