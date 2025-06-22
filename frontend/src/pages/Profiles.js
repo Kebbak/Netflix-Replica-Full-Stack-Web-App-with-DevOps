@@ -8,7 +8,7 @@ export default function Profiles() {
   const [profiles, setProfiles] = useState([
     { name: 'User1', image: 'https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png', isKids: false },
     { name: 'User2', image: 'https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png', isKids: false },
-    { name: 'Dzieci', image: 'https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png', isKids: true },
+    { name: 'Kids', image: 'https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png', isKids: true },
   ]);
 
   const [adding, setAdding] = useState(false);
@@ -53,9 +53,6 @@ export default function Profiles() {
                 className="w-24 h-24 md:w-32 md:h-32 rounded"
               />
               <span className="mt-2 text-lg">{profile.name}</span>
-              {profile.isKids && (
-                <span className="text-xs text-blue-400 mt-1">Kids</span>
-              )}
             </button>
           ))}
 
