@@ -29,18 +29,14 @@ export default function MoviesPage() {
             const getCertification = (results) => {
               const pl = results.find(r => r.iso_3166_1 === 'PL');
               const us = results.find(r => r.iso_3166_1 === 'US');
-              return (
-                  pl?.release_dates?.find(r => r.certification)?.certification ||
-                  us?.release_dates?.find(r => r.certification)?.certification ||
-                  null
-              );  
-           };
-           const certification = getCertification(certData.results);
-           // for debugging purposes
-           console.log(`Movie: ${movie.title}, Certification: ${certification}`);
+              const cert = pl?.release_dates?.find(r => r.certification)?.certification ||
+                           us?.release_dates?.find(r => r.certification)?.certification ||
+                           null;
+              return cert;
+            };
 
-
-
+            const certification = getCertification(certData.results);
+            console.log(`Movie: ${movie.title}, Certification: ${certification}`);
             return { ...movie, certification };
           } catch (err) {
             console.error(`Error fetching certification for movie ${movie.id}`, err);
@@ -49,7 +45,18 @@ export default function MoviesPage() {
         })
       );
 
-      return moviesWithRatings;
+      // Flexible filter: allow numeric 16+ or common equivalents
+      const filteredMovies = moviesWithRatings.filter(movie => {
+        const cert = movie.certification;
+        return cert && (
+          parseInt(cert) >= 16 ||
+          cert.includes('16') ||
+          cert.includes('TV-14') ||
+          cert.includes('PG-13')
+        );
+      });
+
+      return filteredMovies;
     };
 
     const fetchAll = async () => {

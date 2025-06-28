@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-export default function MovieCard({ movie, certification = '16', isInMyList, onToggleMyList }) {
+export default function MovieCard({ movie, certification = 'NR', isInMyList, onToggleMyList }) {
   const poster = movie.poster_path || movie.backdrop_path;
 
   const handleToggle = (e) => {
@@ -25,14 +25,15 @@ export default function MovieCard({ movie, certification = '16', isInMyList, onT
           }}
         />
 
-        {/* Age Rating Badge - bottom left */}
-        {certification && (
-          <div className="absolute bottom-2 left-2 bg-gray-700 text-white text-xs font-bold px-2 py-1 rounded-md shadow-md z-10">
-            {certification}+
-          </div>
-        )}
+        {/* Age Rating Badge */}
+        <div
+          title={`Age rating: ${certification}+`}
+          className="absolute bottom-2 left-2 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-md shadow-md z-10"
+        >
+          {certification}+
+        </div>
 
-        {/* Speaker Icon - bottom right */}
+        {/* Speaker Icon */}
         <button
           onClick={(e) => {
             e.preventDefault();
