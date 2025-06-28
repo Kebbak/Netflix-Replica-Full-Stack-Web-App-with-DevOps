@@ -7,8 +7,8 @@ enhanced with complete DevOps automation using Docker, GitHub Actions, ArgoCD, a
 # 📦 __How to Run Locally (Dev Mode)__
 
 git clone https://github.com/Kebba91/Netflix-Replica-Full-Stack-Web-App-with-DevOps
-# frontend: npm istall & npm start
-# backend: npm install & node server. You might install few more depencies
+frontend: npm istall & npm start
+backend: npm install & node server. You might install few more depencies
 
 
 # 🛠 Tech Stack
@@ -50,13 +50,13 @@ Watchlist support
 Secure admin dashboard
 Upload and manage movies
 
-# 🧱  DevOps & Deployment
-Dockerized microservices (frontend/backend)
-CI/CD pipeline with GitHub Actions & ArgoCD
-Infrastructure as Code with Terraform
-Security scanning using Trivy & Checkov
-Real-time monitoring with Prometheus & Grafana
-Deployed on AWS EKS (Kubernetes)
+### 🧱  DevOps & Deployment
+- Dockerized microservices (frontend/backend)
+- CI/CD pipeline with GitHub Actions & ArgoCD
+- Infrastructure as Code with Terraform
+- Security scanning using Trivy & Checkov
+- Real-time monitoring with Prometheus & Grafana
+- Deployed on AWS EKS (Kubernetes)
 
 
 
