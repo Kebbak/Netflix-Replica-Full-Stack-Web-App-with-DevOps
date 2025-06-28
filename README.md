@@ -16,6 +16,7 @@ git clone https://github.com/Kebbak/Netflix-Replica-Full-Stack-Web-App-with-DevO
 - React
 - Tailwind CSS / Material UI
 - Video.js (HLS player)
+- Interacts via REST APIs with the backend
 
 ### Backend
 - Node.js
@@ -33,7 +34,7 @@ git clone https://github.com/Kebbak/Netflix-Replica-Full-Stack-Web-App-with-DevO
 - Terraform (Infrastructure Provisioning)
 - Trivy & Checkov (Security Scanning)
 - Prometheus + Grafana (Monitoring)
-- AWS Cloud (EKS, S3, etc.)
+- AWS Cloud (EKS, S3, ECR, IAM.)
 
 ###  Key Features
 ###  Authentication
@@ -57,6 +58,10 @@ git clone https://github.com/Kebbak/Netflix-Replica-Full-Stack-Web-App-with-DevO
 - Security scanning using Trivy & Checkov
 - Real-time monitoring with Prometheus & Grafana
 - Deployed on AWS EKS (Kubernetes)
+
+### Architecture Diagram
+
+<img width="479" alt="image" src="https://github.com/user-attachments/assets/b986e7b7-321e-4dac-93f0-3900b7f1a668" />
 
 
 
