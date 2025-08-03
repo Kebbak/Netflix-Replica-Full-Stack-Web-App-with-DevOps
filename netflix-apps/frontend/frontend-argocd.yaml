@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: backend
+  name: frontend
   namespace: netflix-clone
 spec:
   project: default
   source:
     repoURL: 'git@github.com:Kebbak/Netflix-Replica-Full-Stack-Web-App-with-DevOps.git'
     targetRevision: main
-    path: K8s-Manifests/backend
+    path: K8s-Manifests/frontend
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: default

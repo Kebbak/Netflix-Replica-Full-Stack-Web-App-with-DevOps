@@ -1,19 +1,20 @@
+# This file is part of the Netflix Replica Full Stack Web App with DevOps project.
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: netflix-app-of-apps
-  namespace: argocd
+  namespace: netflix-clone
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/Kebba91/Netflix-Replica-Full-Stack-Web-App-with-DevOps'
+    repoURL: 'git@github.com:Kebbak/Netflix-Replica-Full-Stack-Web-App-with-DevOps.git'
     targetRevision: main
     path: netflix-apps
     directory:
       recurse: true
   destination:
     server: https://kubernetes.default.svc
-    namespace: argocd
+    namespace: netflix-clone
   syncPolicy:
     automated:
       prune: true

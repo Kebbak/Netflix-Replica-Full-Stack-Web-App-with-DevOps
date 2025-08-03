@@ -23,4 +23,5 @@ spec:
               mountPath: /data/db
       volumes:
         - name: mongodb-storage
-          emptyDir: {} # This istemporary storage for testing
+          persistentVolumeClaim:
+            claimName: mongodb-pvc

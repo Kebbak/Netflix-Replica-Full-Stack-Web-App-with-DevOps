@@ -20,3 +20,11 @@ spec:
         args: ["-config.file=/etc/promtail/promtail.yaml"]
         ports:
         - containerPort: 9080
+        volumeMounts:
+        - name: promtail-config
+          mountPath: /etc/promtail/promtail.yaml
+          subPath: promtail.yaml
+      volumes:
+      - name: promtail-config
+        configMap:
+          name: promtail-config
