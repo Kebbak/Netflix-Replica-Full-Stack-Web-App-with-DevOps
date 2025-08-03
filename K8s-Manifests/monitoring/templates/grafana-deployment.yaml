@@ -19,3 +19,17 @@ spec:
         image: grafana/grafana:latest
         ports:
         - containerPort: 3000
+        volumeMounts:
+        - name: grafana-dashboard-cpu-memory
+          mountPath: /etc/grafana/provisioning/dashboards/cpu-memory-dashboard.json
+          subPath: cpu-memory-dashboard.json
+        - name: grafana-dashboard-provisioning
+          mountPath: /etc/grafana/provisioning/dashboards/dashboards.yaml
+          subPath: dashboards.yaml
+      volumes:
+      - name: grafana-dashboard-cpu-memory
+        configMap:
+          name: grafana-dashboard-cpu-memory
+      - name: grafana-dashboard-provisioning
+        configMap:
+          name: grafana-dashboard-provisioning

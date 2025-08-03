@@ -21,3 +21,5 @@ spec:
           env:
             - name: REACT_APP_API_URL
               value: "http://backend.netflix-clone.svc.cluster.local:5000"
+          # volumeMounts removed to disable PVC/PV usage
+      # volumes removed to disable PVC/PV usage
