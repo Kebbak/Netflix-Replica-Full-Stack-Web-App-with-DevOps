@@ -1,4 +1,4 @@
-# build and push the backend Docker image to Amazon ECR
+# Terraform modules to create EKS cluster and node group
 # This file is part of the Infra-Provisioning module for EKS cluster setup.
 
 module "eks_cluster" {

@@ -4,7 +4,7 @@ name: Terraform Plan
 on:
   push:
     branches:
-      - '**'
+      - main
     paths:
       - 'Infra-Provisioning/**'
 
@@ -33,7 +33,7 @@ jobs:
         run: pip install checkov
 
       - name: Run Checkov (non-blocking)
-        run: checkov -d Infra-Provisioning
+        run: checkov -d Infra-Provisioning --compact
         continue-on-error: true
 
       - name: Terraform Init
