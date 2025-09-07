@@ -6,7 +6,7 @@ on:
     branches:
       - '**'
     paths:
-      - 'Infra/**'
+      - 'Infra-Provisioning/**'
 
 jobs:
   terraform-plan:

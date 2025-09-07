@@ -1,3 +1,4 @@
+# Terraform modules to create EKS cluster and node group
 module "eks_cluster" {
   source                 = "./modules/eks"
   cluster_name           = var.cluster_name
