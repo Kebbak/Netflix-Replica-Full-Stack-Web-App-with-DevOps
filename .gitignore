@@ -5,3 +5,7 @@ data.tf
 crash.log
 .terraform/
 .terraform.lock.hcl
+
+
+backend/.env
+frontend/.env
