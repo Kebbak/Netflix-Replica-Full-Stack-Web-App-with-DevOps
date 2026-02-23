@@ -1,7 +1,7 @@
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: mongodb
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: mongodb
 # spec:
 #   template:
 #     spec:

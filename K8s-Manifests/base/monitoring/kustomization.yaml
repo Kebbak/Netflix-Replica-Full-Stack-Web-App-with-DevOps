@@ -5,6 +5,8 @@ resources:
   - ../../monitoring/alloy.yaml
   - ../../monitoring/datasource-grafana-configmap.yaml
   - ../../monitoring/grafana-dashboard-cpu-memory.yaml
-patches:
-  - patch.yaml
-  - ../shared-infra/patch.yaml
+  - ../../monitoring/loki-configmap.yaml
+  
+# patches:
+#   - patch.yaml
+#   - ../shared-infra/patch.yaml

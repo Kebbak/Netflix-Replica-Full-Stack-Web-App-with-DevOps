@@ -3,6 +3,7 @@ resources:
   - ../../frontend/service.yaml
   - ../../frontend/frontend-pv.yaml
   - ../../frontend/frontend-pvc.yaml
-patches:
-  - patch.yaml
-  - ../shared-infra/patch.yaml
+
+# patches:
+#   - patch.yaml
+#   - ../shared-infra/patch.yaml

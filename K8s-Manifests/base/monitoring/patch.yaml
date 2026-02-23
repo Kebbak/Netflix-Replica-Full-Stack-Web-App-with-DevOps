@@ -1,7 +1,7 @@
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: prometheus
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: prometheus
 # spec:
 #   template:
 #     spec:
